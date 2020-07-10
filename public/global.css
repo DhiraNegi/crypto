@@ -1,19 +1,22 @@
-html, body {
+html,
+body {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
 body {
-	color: #333;
+	color: #fff;
 	margin: 0;
-	padding: 8px;
+	padding: 0px;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Ubuntu Mono', monospace;
+	background-color: black;
+	height: auto;
 }
 
 a {
-	color: rgb(0,100,200);
+	color: #f7931a;
 	text-decoration: none;
 }
 
@@ -22,14 +25,17 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: #f7931a;
 }
 
 label {
 	display: block;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0.4em;
@@ -63,4 +69,69 @@ button:not(:disabled):active {
 
 button:focus {
 	border-color: #666;
+}
+
+main {
+
+	min-height: calc(70vh - 40px);
+	align-items: center;
+    justify-content: center;
+
+}
+
+.flex-grid {
+	display: grid;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+}
+
+.col {
+	justify-content: center;
+	padding: 15px;
+}
+
+.card {
+	border: 1px solid #f7931a;
+	padding: 2em;
+	text-align: center;
+}
+
+.card-text {
+	font-size: 18px;
+}
+
+@media (min-width:320px) {
+	.flex-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+@media (min-width:780px) {
+	.flex-grid {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 8em;
+	}
+}
+@media (min-width:1024px) {
+	.flex-grid {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 15em;
+	}
+}
+nav {
+	padding: 0 2em;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end
+}
+
+.text-center {
+	text-align: center;
+}
+.footer {
+	padding: 1em 0;
 }
