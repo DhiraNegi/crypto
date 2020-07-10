@@ -1,3 +1,7 @@
+## run locally
+npm install
+npm run dev
+
 ## Deploying to the web
 
 ### With [Vercel](https://vercel.com)
